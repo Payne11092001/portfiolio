@@ -1328,3 +1328,9 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media only screen and (max-width: 600px) {
+  .typewrite {
+    font-size: 20px; /* Adjust the font size for smaller devices */
+    text-align: center; /* Center the text */
+  }
+}
