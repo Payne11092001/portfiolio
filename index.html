@@ -19,6 +19,59 @@
 
         <title>Arman Portfolio</title>
     </head>
+    <style>
+         /* Gallery Image */
+        .gallery__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .gallery__item {
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .gallery__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .3s ease;
+        }
+        .gallery__img:hover {
+            transform: scale(1.05);
+        }
+
+
+        #lightbox {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        justify-content: center;
+        align-items: center;
+        }
+
+        /* Image inside lightbox */
+        #lightbox img {
+        max-width: 95%;   /* Keeps image within screen */
+        max-height: 95%;  /* Keeps image within screen */
+        object-fit: contain;
+        }
+
+        /* Close button */
+        #lightbox span {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        }
+    </style>
     <body>
         <!--==================== HEADER ====================-->
         <header class="header" id="header" data-aos="fade-down">
@@ -147,7 +200,7 @@
                        
 
                         <div class="about__buttons">
-                            <a download="" href="arman-resume.pdf" class="button button--flex">
+                            <a download="" href="cv(arman_final).pdf" class="button button--flex">
                                 Download CV<i class="uil uil-download-alt button__icon"></i>
                             </a>
                         </div>
@@ -693,6 +746,52 @@
 
         </section>
 
+
+  <!--==================== GALLERY PAGE ====================-->
+     <section class="gallery section" data-aos="fade-up">
+        <div class="gallery__container container grid">
+            <h2 class="section__title">Gallery</h2>
+            <p class="section__subtitle">Explore some of my works and designs</p>
+
+            <div class="gallery__grid">
+                <div class="gallery__item">
+                    <img src="image/1.png" alt="Gallery Image 1" class="gallery__img" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery__item">
+                    <img src="image/2.png" alt="Gallery Image 2" class="gallery__img" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery__item">
+                    <img src="image/3.png" alt="Gallery Image 3" class="gallery__img" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery__item">
+                    <img src="image/4.png" alt="Gallery Image 4" class="gallery__img" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery__item">
+                    <img src="image/5.png" alt="Gallery Image 5" class="gallery__img" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery__item">
+                    <img src="image/6.png" alt="Gallery Image 6" class="gallery__img" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery__item">
+                    <img src="image/7.png" alt="Gallery Image 7" class="gallery__img" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery__item">
+                    <img src="image/1.png" alt="Gallery Image 8" class="gallery__img" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery__item">
+                    <img src="image/1.png" alt="Gallery Image 9" class="gallery__img" onclick="openLightbox(this)">
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span>&times;</span>
+  <img id="lightbox-img" src="">
+</div>
+
+        <!--==================== GALLERY PAGE ====================-->
+
         <!--==================== PROJECT IN MIND ====================-->
         <section class="project section"data-aos="fade-right">
 
@@ -704,14 +803,13 @@
                         <a href="#contact" class="button button--flex button--white">Contact me
                             <i class="uil uil-message project__icon button__icon"></i>
                         </a>
-                       
                     </div>
                 <img src="assets/img/project.png" alt="" class="project__img"> 
                 </div>
             </div>
-
         </section>
-
+        <!--==================== PROJECT IN MIND ====================-->
+      
       
 
         <!--==================== CONTACT ME ====================-->
@@ -840,6 +938,16 @@
                 easing: 'ease-in-out', // Animation easing
                 once: true // Animation only once
             });
+            function openLightbox(imgElement) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            lightbox.style.display = "flex";
+            lightboxImg.src = imgElement.src;
+            }
+
+            function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+            }
         </script>
 </body>
 
