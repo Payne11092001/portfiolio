@@ -62,16 +62,27 @@
       <div class="float-card fc4"><span class="dot" style="background:#ec4899"></span>Graphic Design</div>
       <div class="portrait-container">
         <div class="portrait-glow"></div>
-        <div class="portrait-frame" id="portrait">
-          <div style="text-align:center">
-              <img src="packages/image/casual.png" id="portrait-img"
-                   style="width:100%;height:100%;object-fit:cover;border-radius:22px;transition:opacity .5s">
-              <img src="packages/image/formal.png" id="portrait-formal"
-                   style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:22px;opacity:0;transition:opacity .5s">
-            <div style="font-size:12px;color:var(--neon);letter-spacing:3px;text-transform:uppercase;margin-top:16px">Arman Baldo</div>
-            <div style="font-size:11px;color:var(--muted);margin-top:4px">IT Specialist &amp; Web Developer</div>
-          </div>
-          <div class="portrait-hover-hint">Hover me ✦</div>
+
+        <!--
+          ═══════════════════════════════════════════════
+          HOW TO ADD YOUR REAL PHOTOS:
+          1. Place your casual photo as:  casual.jpg
+          2. Place your formal photo as:  formal.jpg
+          3. Update the src attributes below.
+          The WebGL water shader will handle everything else.
+          ═══════════════════════════════════════════════
+        -->
+        <img id="img-casual" src="packages/image/casual.png"
+             alt="Arman Baldo casual"
+             crossorigin="anonymous">
+        <img id="img-formal" src="packages/image/formal.png"
+             alt="Arman Baldo formal"
+             crossorigin="anonymous">
+
+        <div class="portrait-badge" id="portrait-badge">Casual Mode</div>
+        <canvas id="water-canvas" width="340" height="420"></canvas>
+        <div class="portrait-hint">
+          <span></span> Hover for water effect <span></span>
         </div>
       </div>
     </div>
