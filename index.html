@@ -38,18 +38,18 @@
 </nav>
 
 <!-- HERO -->
-<section ="hero">
+<section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
     <div class="hero-left">
       <div class="hero-eyebrow">Available for work</div>
       <h1 class="hero-name">ARMAN<br>BALDO</h1>
       <div class="hero-title">
-        <span class="typing-text" ="typing"></span><span class="cursor-blink" style="color:var(--neon)">|</span>
+        <span class="typing-text" id="typing"></span><span class="cursor-blink" style="color:var(--neon)">|</span>
       </div>
-      <p class="hero-desc">Inspired career-minded indivual combining technical expertise and creative skills to drive organizational excellence. Based in Manila, Philippines.</p>
+      <p class="hero-desc">Inspired career-minded individual combining technical expertise and creative skills to drive organizational excellence. Based in Manila, Philippines.</p>
       <div class="hero-cta">
-        <button class="btn-primary" onclick="document.getElementBy('contact').scrollIntoView({behavior:'smooth'})">Let's Connect</button>
+        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Let's Connect</button>
         <button class="btn-outline" onclick="window.open('arman_cv.pdf','_blank')">
             View Resume ↗
         </button>
@@ -62,19 +62,12 @@
       <div class="float-card fc4"><span class="dot" style="background:#ec4899"></span>Graphic Design</div>
       <div class="portrait-container">
         <div class="portrait-glow"></div>
-        <div class="portrait-frame" ="portrait">
+        <div class="portrait-frame" id="portrait">
           <div style="text-align:center">
-            <!--
-              TO ADD YOUR REAL PHOTO:
-              Replace the div below with:
-              <img src="your-photo-casual.jpg" ="portrait-img"
+              <img src="packages/image/casual.png" id="portrait-img"
                    style="width:100%;height:100%;object-fit:cover;border-radius:22px;transition:opacity .5s">
-              For the hover effect, add a second image:
-              <img src="your-photo-formal.jpg" id="portrait-formal"
+              <img src="packages/image/formal.png" id="portrait-formal"
                    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:22px;opacity:0;transition:opacity .5s">
-              Then in JS, toggle opacity on portrait mouseenter/mouseleave.
-            -->
-            <div style="font-size:80px;line-height:1">👨‍💻</div>
             <div style="font-size:12px;color:var(--neon);letter-spacing:3px;text-transform:uppercase;margin-top:16px">Arman Baldo</div>
             <div style="font-size:11px;color:var(--muted);margin-top:4px">IT Specialist &amp; Web Developer</div>
           </div>
@@ -141,7 +134,7 @@
             <div class="tl-dot" style="border-color:#f59e0b;box-shadow:0 0 12px rgba(245,158,11,0.4)"></div>
             <div class="tl-year">Education</div>
             <div class="tl-role">BS Information Technology</div>
-            <div class="tl-company">Eastern Samar State University</div>
+            <div class="tl-company">Eastern Samar Estate University</div>
           </div>
         </div>
       </div>
@@ -228,8 +221,8 @@
         <div class="proj-body">
           <div class="proj-tech">
             <span class="tech-tag">PHP</span>
-            <span class="tech-tag">Boostrap</span>
             <span class="tech-tag">MySql</span>
+            <span class="tech-tag">Bootstrap</span>
           </div>
           <div class="proj-title">ID Generator System</div>
           <div class="proj-desc">Automated employee ID generation system with photo integration, template design, and batch printing capabilities.</div>
@@ -337,10 +330,10 @@
         <div class="info-label">Email</div>
         <div class="info-val">baldoarman7@gmail.com</div>
       </div>
-      <div class="info-card" style="cursor:pointer" onclick="window.open('https://payne11092001.github.io/Arman-Baldo/','_blank')">
-        <div class="info-icon">🌐</div>
-        <div class="info-label">Portfolio</div>
-        <div class="info-val" style="color:var(--neon)">payne11092001.github.io/Arman-Baldo</div>
+      <div class="info-card" style="cursor:pointer" onclick="window.location.href='tel:+639274684772'">
+          <div class="info-icon">📞</div>
+          <div class="info-label">Contact Number</div>
+          <div class="info-val" style="color:var(--neon)">+63 912 345 6789</div>
       </div>
       <div class="info-card">
         <div class="info-icon">📍</div>
